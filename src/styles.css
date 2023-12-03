@@ -1,4 +1,10 @@
 #content {
     height: 200px;
     background-color: red;
+    width: 200px;
+}
+
+.navigation-bar {
+    height: 55px;
+    background-color: rgb(73, 72, 72);
 }
