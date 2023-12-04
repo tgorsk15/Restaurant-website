@@ -7,9 +7,9 @@ html, body {
 }
 
 #content {
-    height: 200px;
+    min-height: 100vh;
+    width: 100%;
     background-color: red;
-    width: 200px;
 }
 
 .navigation-bar {
@@ -31,6 +31,30 @@ html, body {
 }
 
 .home-container {
-    height: 200px;
+    display: grid;
+    min-width: 100vh;
+    min-height: 100vh;
     background-color: green;
+    grid-template-columns: 1fr 2fr 2fr;
+    
+    padding: 50px 150px;
+    
+}
+
+.home1 {
+    content: 'Frogs';
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.home2 {
+    content: 'Words';
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+.home3 {
+    content: 'picture';
+    grid-column: 3;
+    grid-row: 1 / 3;
 }

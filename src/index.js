@@ -39,7 +39,7 @@ const siteNavigator = (function () {
 
    
     homePage();
-    body.appendChild(homeContainer)
+    pageHolder.appendChild(homeContainer)
 
 
 })();
