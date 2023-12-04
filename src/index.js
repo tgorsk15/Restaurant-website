@@ -1,4 +1,6 @@
 import './styles.css';
+import './home.js';
+import { homePage, homeContainer } from './home.js';
 
 
 console.log('test')
@@ -35,10 +37,12 @@ const siteNavigator = (function () {
         navigationBar.appendChild(tab);
     }
 
+   
+    homePage();
+    body.appendChild(homeContainer)
+
 
 })();
-
-// siteNavigator()
 
 
 

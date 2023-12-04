@@ -1,3 +1,11 @@
+html {
+    min-height: 100%;
+}
+
+html, body {
+    margin: 0px;
+}
+
 #content {
     height: 200px;
     background-color: red;
@@ -20,4 +28,9 @@
     padding: 0px 10px;
     text-align: center;
     align-items: center;
+}
+
+.home-container {
+    height: 200px;
+    background-color: green;
 }
