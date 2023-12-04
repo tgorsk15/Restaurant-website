@@ -7,6 +7,7 @@
 
 // Div 3 will contain an img, something Wizarding-world-esque
 
+const homeContainer = document.createElement('div');
 
 export const homePage = function () {
     // need to start with an outer container .. this outer
@@ -14,11 +15,12 @@ export const homePage = function () {
     // content div, thus making it visible on the page
     // const body = document.body;
 
-    const homeContainer = document.createElement('div');
+    
     // this won't be appended to the the "content" div until it is
     // called upon in the index.js file
 
     homeContainer.classList.add('home-container');
+    homeContainer.textContent = 'Is this working?'
     // body.appendChild(homeContainer);
 
     console.log('homepage is linked');
@@ -27,5 +29,7 @@ export const homePage = function () {
 
 }
 
-export { homeContainer };
+export {homeContainer};
+
+
 
