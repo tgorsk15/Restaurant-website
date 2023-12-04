@@ -7,4 +7,17 @@
 .navigation-bar {
     height: 55px;
     background-color: rgb(73, 72, 72);
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
+
+.navigation-tab {
+    display: flex;
+    width: 80px;
+    height: 100%;
+    background-color: rgb(96, 41, 41);
+    padding: 0px 10px;
+    text-align: center;
+    align-items: center;
 }
