@@ -21,7 +21,6 @@ export const homePage = function () {
     // called upon in the index.js file
 
     homeContainer.classList.add('home-container');
-    // homeContainer.textContent = 'Is this working?'
     // body.appendChild(homeContainer);
 
     // create 3 div containers within the homeContainer
