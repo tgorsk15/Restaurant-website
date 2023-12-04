@@ -37,7 +37,7 @@ html, body {
     background-color: green;
     grid-template-columns: 1fr 2fr 2fr;
     
-    padding: 50px 150px;
+    padding: 100px 150px;
     
 }
 
@@ -45,6 +45,10 @@ html, body {
     content: 'Frogs';
     grid-column: 1 / 2;
     grid-row: 1;
+}
+
+.frog-icon {
+    height: 100px;
 }
 
 .home2 {
