@@ -36,25 +36,51 @@ html, body {
     min-height: 100vh;
     background-color: green;
     grid-template-columns: 1fr 2fr 2fr;
-    
+    column-gap: 100px;
     padding: 100px 150px;
-    
+    justify-items: center;
+    /* not working: */
+    background-image: './imgs/homepage.jpg';
 }
 
 .home1 {
+    display: flex;
+    flex-direction: column;
     content: 'Frogs';
     grid-column: 1 / 2;
     grid-row: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.home1 * {
+    color: azure;
 }
 
 .frog-icon {
+    display: inline-block;
     height: 100px;
+    width: max-content;
 }
 
 .home2 {
-    content: 'Words';
     grid-column: 2;
     grid-row: 1 / 3;
+}
+
+.home2 * {
+    color: azure;
+}
+
+.home-box {
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    height: 250px;
+}
+
+.hat-icon {
+    filter: invert(80%) sepia(44%) saturate(455%) hue-rotate(6deg) brightness(99%) contrast(93%);
+    height: 30px;
 }
 
 .home3 {

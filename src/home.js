@@ -6,7 +6,11 @@
 //  - will have a small block of text wiht a short description
 
 // Div 3 will contain an img, something Wizarding-world-esque
-import frog from './imgs/TheFrogChoirHM.png'
+import frog from './imgs/TheFrogChoirHM.png';
+
+import Hat from './imgs/witch-hat.png';
+
+// import photo from './imgs/homepage.jpg';
 
 
 const homeContainer = document.createElement('div');
@@ -56,10 +60,32 @@ function styleHome1(home1) {
     frogIcon.src = frog;
     frogIcon.classList.add('frog-icon')
     home1.appendChild(frogIcon);
+
+    const frogTitle = document.createElement('h3');
+    frogTitle.textContent = 'Live performances from Frog Choir every Friday at 7pm';
+    // frogTitle.classList.add('frog-title');
+    home1.appendChild(frogTitle);
 }
 
-function styleHome2 (home2) {
 
+function styleHome2 (home2) {
+    const homeTitle = document.createElement('h2');
+    homeTitle.textContent = 'Add a bit of Magic to the eveneing ...'
+    home2.appendChild(homeTitle);
+
+
+    const homeBox = document.createElement('div');
+    homeBox.classList.add('home-box');
+    home2.appendChild(homeBox);
+
+    const homeDescription = document.createElement('h4');
+    homeDescription.textContent = 'Come dine with your fellow witches and wizards at our 5 star establishment on the corner of Crescent and Dobby in upper Diagon Alley';
+    homeBox.appendChild(homeDescription);
+
+    const homeLogo = new Image();
+    homeLogo.src  = Hat;
+    homeLogo.classList.add('hat-icon')
+    homeBox.appendChild(homeLogo);
 }
 
 function styleHome3 (home3) {
