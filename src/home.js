@@ -21,7 +21,7 @@ export const homePage = function () {
     // content div, thus making it visible on the page
 
     // const body = document.body;
-    const homeDivNames = ['home1', 'home2', 'home3'];
+    const homeDivNames = ['home1', 'home2'];
     let homeDivs = [];
     
     // this won't be appended to the the "content" div until it is
@@ -31,7 +31,7 @@ export const homePage = function () {
     // body.appendChild(homeContainer);
 
     // create 3 div containers within the homeContainer
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
         const homeDiv = document.createElement('div');
         homeDiv.classList.add(homeDivNames[i]);
         homeContainer.appendChild(homeDiv);
@@ -39,14 +39,12 @@ export const homePage = function () {
     };
     let home1 = homeDivs[0];
     let home2 = homeDivs[1];
-    let home3 = homeDivs[2];
 
 
     // style each homeDiv accordingly
     // home1:
     styleHome1(home1);
     styleHome2(home2);
-    styleHome3(home3);
 
 
     console.log('homepage is linked');
@@ -55,28 +53,17 @@ export const homePage = function () {
 
 }
 
-function styleHome1(home1) {
-    const frogIcon = new Image();
-    frogIcon.src = frog;
-    frogIcon.classList.add('frog-icon')
-    home1.appendChild(frogIcon);
-
-    const frogTitle = document.createElement('h3');
-    frogTitle.textContent = 'Live performances from Frog Choir every Friday at 7pm';
-    // frogTitle.classList.add('frog-title');
-    home1.appendChild(frogTitle);
-}
 
 
-function styleHome2 (home2) {
+function styleHome1 (home1) {
     const homeTitle = document.createElement('h2');
     homeTitle.textContent = 'Add a bit of Magic to the eveneing ...'
-    home2.appendChild(homeTitle);
+    home1.appendChild(homeTitle);
 
 
     const homeBox = document.createElement('div');
     homeBox.classList.add('home-box');
-    home2.appendChild(homeBox);
+    home1.appendChild(homeBox);
 
     const homeDescription = document.createElement('h4');
     homeDescription.textContent = 'Come dine with your fellow witches and wizards at our 5 star establishment on the corner of Crescent and Dobby in upper Diagon Alley';
@@ -88,8 +75,16 @@ function styleHome2 (home2) {
     homeBox.appendChild(homeLogo);
 }
 
-function styleHome3 (home3) {
+function styleHome2 (home2) {
+    const frogIcon = new Image();
+    frogIcon.src = frog;
+    frogIcon.classList.add('frog-icon')
+    home2.appendChild(frogIcon);
 
+    const frogTitle = document.createElement('h3');
+    frogTitle.textContent = 'Live performances from Frog Choir every Friday at 7pm';
+    // frogTitle.classList.add('frog-title');
+    home2.appendChild(frogTitle);
 }
 
 export {homeContainer};

@@ -23,8 +23,8 @@ const siteNavigator = (function () {
     navigationBar.classList.add('navigation-bar');
 
     // adds the navigation bar to the top
-    document.body.appendChild(navigationBar);
-    body.insertBefore(navigationBar, pageHolder);
+    pageHolder.appendChild(navigationBar);
+    // body.insertBefore(navigationBar, pageHolder);
 
 
     // array containing the tab names
