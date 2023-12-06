@@ -70,7 +70,7 @@ function styleHome1 (home1) {
     home1.appendChild(homeBox);
 
     const homeHook = document.createElement('h2');
-    homeHook.textContent = 'Add a bit of Magic to your eveneing ...'
+    homeHook.textContent = 'Add a bit of Magic to your evening ...'
     homeHook.classList.add('home-hook')
     homeBox.appendChild(homeHook);
 
@@ -84,23 +84,6 @@ function styleHome1 (home1) {
     orderButton.classList.add('order-button');
     homeBox.appendChild(orderButton);
 
-    //  const homeTitle = document.createElement('h2');
-    // homeTitle.textContent = 'Add a bit of Magic to the eveneing ...'
-    // home1.appendChild(homeTitle);
-
-
-    // const homeBox = document.createElement('div');
-    // homeBox.classList.add('home-box');
-    // home1.appendChild(homeBox);
-
-    // const homeDescription = document.createElement('h4');
-    // homeDescription.textContent = 'Come dine with your fellow witches and wizards at our 5 star establishment on the corner of Crescent and Dobby in upper Diagon Alley';
-    // homeBox.appendChild(homeDescription);
-
-    // const homeLogo = new Image();
-    // homeLogo.src  = Hat;
-    // homeLogo.classList.add('hat-icon')
-    // homeBox.appendChild(homeLogo);
 }
 
 function styleHome2 (home2) {
