@@ -58,14 +58,40 @@ html, body {
 }
 
 .home1 h1 {
-    font-size: 52px;
+    display: flex;
+    justify-content: center;
+    font-size: 62px;
     position: relative;
 }
 
-.frog-icon {
-    display: inline-block;
-    height: 100px;
-    width: max-content;
+.home-box {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 150px;
+}
+
+.hat-icon {
+    position: absolute;
+    top: 0px;
+    right: 85px;
+    filter: invert(80%) sepia(44%) saturate(455%) hue-rotate(6deg) brightness(99%) contrast(93%);
+    height: 70px;
+}
+
+.home-hook {
+    font-size: 35px;
+}
+
+.home-descript {
+    font-size: 20px;
+}
+
+.order-button {
+    width: 120px;
+    height: 25px;
+    color: antiquewhite;
+    background-color: rgb(96, 41, 41);
+    border-radius: 25px;
 }
 
 .home2 {
@@ -92,22 +118,11 @@ html, body {
     font-size: 22px;
 }
 
-.home-box {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    height: 250px;
-}
-
-.hat-icon {
-    position: absolute;
-    top: 20px;
-    right: 52px;
-    filter: invert(80%) sepia(44%) saturate(455%) hue-rotate(6deg) brightness(99%) contrast(93%);
-    height: 30px;
-}
 
 
-.home3 * {
-    font-size: 22px;
-    color: rgb(136, 125, 107);
+.frog-icon {
+    display: inline-block;
+    height: 100px;
+    width: max-content;
 }
+

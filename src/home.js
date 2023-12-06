@@ -8,7 +8,7 @@
 // Div 3 will contain an img, something Wizarding-world-esque
 import frog from './imgs/TheFrogChoirHM.png';
 
-import Hat from './imgs/witch-hat.png';
+import Hat from './imgs/warlock.png';
 
 // import photo from './imgs/homepage.jpg';
 
@@ -59,6 +59,11 @@ function styleHome1 (home1) {
     homeTitle.textContent = 'Bertie Bott\'s'
     home1.appendChild(homeTitle);
 
+    const homeLogo = new Image();
+    homeLogo.src  = Hat;
+    homeLogo.classList.add('hat-icon')
+    homeTitle.appendChild(homeLogo);
+
 
     const homeBox = document.createElement('div');
     homeBox.classList.add('home-box');
@@ -66,16 +71,18 @@ function styleHome1 (home1) {
 
     const homeHook = document.createElement('h2');
     homeHook.textContent = 'Add a bit of Magic to your eveneing ...'
+    homeHook.classList.add('home-hook')
     homeBox.appendChild(homeHook);
 
     const homeDescription = document.createElement('h4');
     homeDescription.textContent = 'Come dine with your fellow witches and wizards at our 5 star establishment on the corner of Crescent and Dobby in upper Diagon Alley';
+    homeDescription.classList.add('home-descript')
     homeBox.appendChild(homeDescription);
 
-    const homeLogo = new Image();
-    homeLogo.src  = Hat;
-    homeLogo.classList.add('hat-icon')
-    homeTitle.appendChild(homeLogo);
+    const orderButton = document.createElement('button');
+    orderButton.textContent = 'Order Online';
+    orderButton.classList.add('order-button');
+    homeBox.appendChild(orderButton);
 
     //  const homeTitle = document.createElement('h2');
     // homeTitle.textContent = 'Add a bit of Magic to the eveneing ...'
