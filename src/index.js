@@ -46,7 +46,7 @@ const siteNavigator = (function () {
     // const tabs = document.querySelectorAll('navigation-tab')
     console.log(tabs)
     tabs.forEach(tab => {
-         tab.addEventListener('click', (e) => {
+         tab.addEventListener('click', () => {
             console.log(tab);
             activeTab = tab;
             console.log(activeTab);
@@ -63,7 +63,10 @@ const siteNavigator = (function () {
             console.log('homepage');
             homePage();
             pageHolder.appendChild(homeContainer);
-            
+
+            // have to disable the Home Div click
+            tabs[0].classList.add('disabled-tab');
+
         } else if (activeTab === tabs[1]) {
             console.log('About');
         } else {
