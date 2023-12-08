@@ -13,6 +13,7 @@ console.log('test')
 
 // create the main website bar at the top
 const siteNavigator = (function () {
+
     const body = document.body;
     const pageHolder = document.getElementById('content');
     console.log(pageHolder);
@@ -39,13 +40,17 @@ const siteNavigator = (function () {
         navigationBar.appendChild(tab);
     }
 
-    let activeTab = tabNames[0];
+    let activeTab = tabs[0];
+    console.log(activeTab);
 
     // const tabs = document.querySelectorAll('navigation-tab')
     console.log(tabs)
     tabs.forEach(tab => {
          tab.addEventListener('click', (e) => {
             console.log(tab);
+            activeTab = tab;
+            console.log(activeTab);
+            switchPage(activeTab);
     
         });
    
@@ -53,7 +58,17 @@ const siteNavigator = (function () {
     // homePage();
     // pageHolder.appendChild(homeContainer)
 
-    function switchPage() {
+    function switchPage(activeTab) {
+        if (activeTab === tabs[0]) {
+            console.log('homepage');
+            homePage();
+            pageHolder.appendChild(homeContainer);
+            
+        } else if (activeTab === tabs[1]) {
+            console.log('About');
+        } else {
+            console.log('doesnt exist')
+        }
 
     }
 
