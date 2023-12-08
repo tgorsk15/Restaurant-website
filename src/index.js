@@ -29,17 +29,33 @@ const siteNavigator = (function () {
 
     // array containing the tab names
     const tabNames = ['Home', 'About', 'Menu', 'Reservations']
+    const tabs = [];
 
     for (let i = 0; i < 4; i++) {
         const tab = document.createElement('div');
         tab.classList.add('navigation-tab');
         tab.textContent = tabNames[i];
+        tabs.push(tab);
         navigationBar.appendChild(tab);
     }
 
+    let activeTab = tabNames[0];
+
+    // const tabs = document.querySelectorAll('navigation-tab')
+    console.log(tabs)
+    tabs.forEach(tab => {
+         tab.addEventListener('click', (e) => {
+            console.log(tab);
+    
+        });
    
-    homePage();
-    pageHolder.appendChild(homeContainer)
+    });
+    // homePage();
+    // pageHolder.appendChild(homeContainer)
+
+    function switchPage() {
+
+    }
 
 
 })();

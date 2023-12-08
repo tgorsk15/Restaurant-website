@@ -4,7 +4,9 @@ const aboutContainer = document.createElement('div');
 
 
 export const aboutPage = function () {
-    const about1 = document.createElement('div');
+    aboutContainer.classList.add('about-container')
+
+    const test = addToAbout(test, 'div', 'special', aboutContainer);
 
 }
 
@@ -15,5 +17,10 @@ export const aboutPage = function () {
 // className = name of class we want to assign
 // fatherElement = name of container we want to append to
 function addToAbout(elementName, element, className, fatherElement ) {
+    elementName = document.createElement(element);
+    elementName.classList.add(className);
+    fatherElement.appendChild(elementName);
 
+    console.log(elementName);
+    return elementName;
 }
