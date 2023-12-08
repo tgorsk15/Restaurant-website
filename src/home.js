@@ -1,16 +1,9 @@
- // have three divs on a grid template
-// Div 1 will contain a callout for a special live 
-// performance that happens every Friday
 
-// Div 2 will contain the name of of restaurant and logo
-//  - will have a small block of text wiht a short description
 
-// Div 3 will contain an img, something Wizarding-world-esque
 import frog from './imgs/TheFrogChoirHM.png';
 
 import Hat from './imgs/warlock.png';
 
-// import photo from './imgs/homepage.jpg';
 
 
 const homeContainer = document.createElement('div');

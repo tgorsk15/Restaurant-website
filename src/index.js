@@ -1,6 +1,7 @@
 import './styles.css';
 import './home.js';
 import { homePage, homeContainer } from './home.js';
+import { aboutPage, aboutContainer } from './about';
 
 
 console.log('test')
@@ -25,7 +26,10 @@ const siteNavigator = (function () {
 
     // adds the navigation bar to the top
     pageHolder.appendChild(navigationBar);
-    // body.insertBefore(navigationBar, pageHolder);
+
+    // opens up tot he default home page
+    homePage();
+    pageHolder.appendChild(homeContainer);
 
 
     // array containing the tab names
@@ -41,6 +45,7 @@ const siteNavigator = (function () {
     }
 
     let activeTab = tabs[0];
+    tabs[0].classList.add('disabled-tab');
     console.log(activeTab);
 
     // const tabs = document.querySelectorAll('navigation-tab')
@@ -62,13 +67,19 @@ const siteNavigator = (function () {
         if (activeTab === tabs[0]) {
             console.log('homepage');
             homePage();
+            // pageHolder.removeChild(aboutContainer);
             pageHolder.appendChild(homeContainer);
 
             // have to disable the Home Div click
             tabs[0].classList.add('disabled-tab');
 
         } else if (activeTab === tabs[1]) {
+            tabs[0].classList.remove('disabled-tab');
             console.log('About');
+            aboutPage();
+            // pageHolder.removeChild(homeContainer);
+            pageHolder.appendChild(aboutContainer);
+
         } else {
             console.log('doesnt exist')
         }

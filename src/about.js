@@ -4,10 +4,12 @@ const aboutContainer = document.createElement('div');
 
 
 export const aboutPage = function () {
-    aboutContainer.classList.add('about-container')
-
-    const test = addToAbout(test, 'div', 'special', aboutContainer);
-
+    aboutContainer.classList.add('about-container');
+    console.log('About page inserted');
+    // const test = document.createElement('div');
+    let test;
+    addToAbout(test, 'div', 'test-div', aboutContainer);
+    console.log(test);
 }
 
 
@@ -24,3 +26,5 @@ function addToAbout(elementName, element, className, fatherElement ) {
     console.log(elementName);
     return elementName;
 }
+
+export {aboutContainer};
