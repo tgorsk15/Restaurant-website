@@ -1,6 +1,6 @@
 import './styles.css';
 import './home.js';
-import { homePage, homeContainer } from './home.js';
+import { homePage, clearHome, homeContainer } from './home.js';
 import { aboutPage, aboutContainer } from './about';
 
 
@@ -29,6 +29,9 @@ const siteNavigator = (function () {
 
     // opens up tot he default home page
     homePage();
+    pageHolder.appendChild(homeContainer);
+
+    aboutPage();
     pageHolder.appendChild(homeContainer);
 
 
@@ -60,15 +63,16 @@ const siteNavigator = (function () {
         });
    
     });
-    // homePage();
-    // pageHolder.appendChild(homeContainer)
+   
 
     function switchPage(activeTab) {
         if (activeTab === tabs[0]) {
+            tabs[1].classList.remove('disabled-tab');
             console.log('homepage');
-            homePage();
+            homeContainer.style = 'display: grid'
+            aboutContainer.style = 'display: none'
             // pageHolder.removeChild(aboutContainer);
-            pageHolder.appendChild(homeContainer);
+            // pageHolder.appendChild(homeContainer);
 
             // have to disable the Home Div click
             tabs[0].classList.add('disabled-tab');
@@ -76,9 +80,11 @@ const siteNavigator = (function () {
         } else if (activeTab === tabs[1]) {
             tabs[0].classList.remove('disabled-tab');
             console.log('About');
-            aboutPage();
+            homeContainer.style = 'display: none'
+            aboutContainer.style = 'display: flex'
             // pageHolder.removeChild(homeContainer);
-            pageHolder.appendChild(aboutContainer);
+            // pageHolder.appendChild(aboutContainer);
+            tabs[1].classList.add('disabled-tab');
 
         } else {
             console.log('doesnt exist')

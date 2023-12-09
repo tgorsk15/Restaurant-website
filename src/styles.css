@@ -135,7 +135,8 @@ html, body {
 
 
 .about-container {
-    display: grid;
+    /* display: : flex; */
+    display: none;
     height: 200px;
     min-width: 100vh;
     min-height: 100vh;

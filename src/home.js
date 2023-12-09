@@ -13,15 +13,27 @@ export const homePage = function () {
     // container will become the child container of the
     // content div, thus making it visible on the page
 
-    // const body = document.body;
+   
     const homeDivNames = ['home1', 'home2'];
     let homeDivs = [];
+    // let hasBeenRun = false;
+    let hasBeenRun;
+    console.log(hasBeenRun);
     
+    // tests wether this has been run... if it has,
+    // it will have to reset
+    if (hasBeenRun === true) {
+        clearHome(hasBeenRun);
+    }
+
+    hasBeenRun = true;
+    console.log(hasBeenRun);
+
     // this won't be appended to the the "content" div until it is
     // called upon in the index.js file
 
     homeContainer.classList.add('home-container');
-    // body.appendChild(homeContainer);
+   
 
     // create 3 div containers within the homeContainer
     for (let i = 0; i < 2; i++) {
@@ -41,6 +53,7 @@ export const homePage = function () {
 
 
     console.log('homepage is linked');
+    hasBeenRun = true;
 
 
 }
@@ -89,6 +102,12 @@ function styleHome2 (home2) {
     frogTitle.textContent = 'Live performances from Frog Choir every Friday at 7pm';
     // frogTitle.classList.add('frog-title');
     home2.appendChild(frogTitle);
+}
+
+export function clearHome (hasBeenRun) {
+    console.log('cleared');
+    hasBeenRun = true;
+    console.log(hasBeenRun);
 }
 
 export {homeContainer};
