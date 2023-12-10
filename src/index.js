@@ -1,7 +1,8 @@
 import './styles.css';
 import './home.js';
 import { homePage, homeContainer } from './home.js';
-import { aboutPage, aboutContainer } from './about';
+import { aboutPage, aboutContainer } from './about.js';
+import { menuPage, menuContainer } from './menu.js';
 
 
 console.log('test')
@@ -34,6 +35,9 @@ const siteNavigator = (function () {
     aboutPage();
     pageHolder.appendChild(aboutContainer);
 
+    menuPage();
+    pageHolder.appendChild(menuContainer);
+
 
     // array containing the tab names
     const tabNames = ['Home', 'About', 'Menu', 'Reservations']
@@ -51,7 +55,7 @@ const siteNavigator = (function () {
     tabs[0].classList.add('disabled-tab');
     console.log(activeTab);
 
-    // const tabs = document.querySelectorAll('navigation-tab')
+
     console.log(tabs)
     tabs.forEach(tab => {
          tab.addEventListener('click', () => {
@@ -68,9 +72,11 @@ const siteNavigator = (function () {
     function switchPage(activeTab) {
         if (activeTab === tabs[0]) {
             tabs[1].classList.remove('disabled-tab');
+            tabs[2].classList.remove('disabled-tab');
             console.log('homepage');
             homeContainer.style = 'display: grid'
             aboutContainer.style = 'display: none'
+            menuContainer.style = 'display: none'
             // pageHolder.removeChild(aboutContainer);
             // pageHolder.appendChild(homeContainer);
 
@@ -79,12 +85,26 @@ const siteNavigator = (function () {
 
         } else if (activeTab === tabs[1]) {
             tabs[0].classList.remove('disabled-tab');
+            tabs[2].classList.remove('disabled-tab');
             console.log('About');
             homeContainer.style = 'display: none'
             aboutContainer.style = 'display: flex'
+            menuContainer.style = 'display: none'
             // pageHolder.removeChild(homeContainer);
             // pageHolder.appendChild(aboutContainer);
+            
             tabs[1].classList.add('disabled-tab');
+
+        }  else if (activeTab === tabs[2]) {
+            tabs[0].classList.remove('disabled-tab');
+            tabs[1].classList.remove('disabled-tab');
+            console.log('Menu clicked');
+
+            menuContainer.style = 'display: grid;'
+            homeContainer.style = 'display: none'
+            aboutContainer.style = 'display: none'
+
+            tabs[2].classList.add('disabled-tab');
 
         } else {
             console.log('doesnt exist')

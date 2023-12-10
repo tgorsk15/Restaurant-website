@@ -204,3 +204,14 @@ html, body {
     border-radius: 25px;
     border: 30px solid rgb(58, 80, 98);
 }
+
+
+/* Menu page */
+
+.menu-container {
+    /* display: grid; */
+    display: none;
+    background-color: lightsalmon;
+    min-height: 100vh;
+    min-width: 100vh;
+}

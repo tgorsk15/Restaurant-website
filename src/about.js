@@ -20,7 +20,7 @@ export const aboutPage = function () {
 
     const aboutTitle = document.createElement('div')
     aboutFactory.addToAbout(aboutTitle, 'about-title', about1Top);
-    aboutTitle.textContent = 'A story Long in the Making'
+    aboutTitle.textContent = 'A Story Long in the Making'
 
     const aboutParagraph = document.createElement('div')
     aboutFactory.addToAbout(aboutParagraph, 'about-para', about1Top)
