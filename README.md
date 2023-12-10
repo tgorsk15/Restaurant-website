@@ -12,3 +12,5 @@ into one main.js file, thus increasing the organization of the program without s
 - learned the syntax for both imports and exports, getting practice with default exports/imports as well
 
 - practiced importing CSS files and imgages, all while keeping these respective files in an organized file system
+
+-used factory functions to increase the efficieny of creating elements and manipulating the DOM, while also feeding these factory functions into the main, ending JS file

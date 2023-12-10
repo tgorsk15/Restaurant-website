@@ -12,6 +12,29 @@ export const aboutPage = function () {
     const about1 = document.createElement('div');
     aboutFactory.addToAbout(about1, 'about1', aboutContainer);
     console.log(about1);
+
+    // container that contains the title and paragraph
+    const about1Top = document.createElement('div');
+    aboutFactory.addToAbout(about1Top, 'about1-top', about1);
+
+
+    const aboutTitle = document.createElement('div')
+    aboutFactory.addToAbout(aboutTitle, 'about-title', about1Top);
+    aboutTitle.textContent = 'A story Long in the Making'
+
+    const aboutParagraph = document.createElement('div')
+    aboutFactory.addToAbout(aboutParagraph, 'about-para', about1Top)
+    aboutParagraph.textContent = `Growing up in a small muggle town off the coast just shy
+    of Weymouth, Bertie Botts was always one of the peculiar sort. With not much
+    to do around his home, he would create fantastical concotions using all sorts
+    of things, not excluding seaweed, seagull feathers, house detergents, and lamb mucus.
+    Once he discovered the world of wizadry and attending Hogwarts, he quickly
+    rose through the ranks to become Hufflepuff's head chef. 30 years later, Bertie
+    is still using his creativenss and passion to run his own restaurant and candy shop, 
+    'Bertie's Bott's, one of the most popular and extravagent brands in the Wizarding World`
+
+
+    const aboutPic = new Image();
 }
 
 
@@ -22,7 +45,6 @@ export const aboutPage = function () {
 const aboutFactory = (function () {
 
     function addToAbout(elementName, className, fatherElement ) {
-        // elementName = document.createElement(element);
         elementName.classList.add(className);
         fatherElement.appendChild(elementName);
 
