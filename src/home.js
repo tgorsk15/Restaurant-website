@@ -16,11 +16,6 @@ export const homePage = function () {
    
     const homeDivNames = ['home1', 'home2'];
     let homeDivs = [];
-    
-   
-    // if (hasBeenRun === true) {
-    //     clearHome(hasBeenRun);
-    // }
 
 
     // this won't be appended to the the "content" div until it is
@@ -53,14 +48,19 @@ export const homePage = function () {
 
 
 function styleHome1 (home1) {
+    const homeTitleContainer = document.createElement('div');
+    homeTitleContainer.classList.add('home-title-container');
+    home1.appendChild(homeTitleContainer);
+
     const homeTitle = document.createElement('h1');
-    homeTitle.textContent = 'Bertie Bott\'s'
-    home1.appendChild(homeTitle);
+    homeTitle.textContent = `Bertie Bott\'s`
+    homeTitleContainer.appendChild(homeTitle);
 
     const homeLogo = new Image();
     homeLogo.src  = Hat;
     homeLogo.classList.add('hat-icon')
-    homeTitle.appendChild(homeLogo);
+    homeTitleContainer.appendChild(homeLogo);
+
 
 
     const homeBox = document.createElement('div');

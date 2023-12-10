@@ -1,4 +1,4 @@
-
+import Bertie from './imgs/Bertie.jpg';
 
 const aboutContainer = document.createElement('div');
 
@@ -33,8 +33,14 @@ export const aboutPage = function () {
     is still using his creativenss and passion to run his own restaurant and candy shop, 
     'Bertie's Bott's, one of the most popular and extravagent brands in the Wizarding World`
 
+    // container that contains image
+    const about1Bottom = document.createElement('div');
+    aboutFactory.addToAbout(about1Bottom, 'about1-bottom', about1);
 
+    // image for About page
     const aboutPic = new Image();
+    aboutPic.src = Bertie;
+    aboutFactory.addToAbout(aboutPic, 'bertie-pic', about1Bottom);
 }
 
 
