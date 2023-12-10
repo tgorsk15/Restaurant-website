@@ -32,7 +32,7 @@ const siteNavigator = (function () {
     pageHolder.appendChild(homeContainer);
 
     aboutPage();
-    pageHolder.appendChild(homeContainer);
+    pageHolder.appendChild(aboutContainer);
 
 
     // array containing the tab names
