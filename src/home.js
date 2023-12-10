@@ -16,18 +16,12 @@ export const homePage = function () {
    
     const homeDivNames = ['home1', 'home2'];
     let homeDivs = [];
-    // let hasBeenRun = false;
-    let hasBeenRun;
-    console.log(hasBeenRun);
     
-    // tests wether this has been run... if it has,
-    // it will have to reset
-    if (hasBeenRun === true) {
-        clearHome(hasBeenRun);
-    }
+   
+    // if (hasBeenRun === true) {
+    //     clearHome(hasBeenRun);
+    // }
 
-    hasBeenRun = true;
-    console.log(hasBeenRun);
 
     // this won't be appended to the the "content" div until it is
     // called upon in the index.js file
@@ -53,8 +47,6 @@ export const homePage = function () {
 
 
     console.log('homepage is linked');
-    hasBeenRun = true;
-
 
 }
 
@@ -104,11 +96,11 @@ function styleHome2 (home2) {
     home2.appendChild(frogTitle);
 }
 
-export function clearHome (hasBeenRun) {
-    console.log('cleared');
-    hasBeenRun = true;
-    console.log(hasBeenRun);
-}
+// export function clearHome (hasBeenRun) {
+//     console.log('cleared');
+//     hasBeenRun = true;
+//     console.log(hasBeenRun);
+// }
 
 export {homeContainer};
 

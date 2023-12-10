@@ -1,6 +1,6 @@
 import './styles.css';
 import './home.js';
-import { homePage, clearHome, homeContainer } from './home.js';
+import { homePage, homeContainer } from './home.js';
 import { aboutPage, aboutContainer } from './about';
 
 
