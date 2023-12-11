@@ -218,7 +218,7 @@ html, body {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 30px;
-    padding: 0px 250px; 
+    padding: 0px 350px; 
     padding-top: 120px;
     
 }
@@ -231,15 +231,21 @@ html, body {
 }
 
 .menu1 {
-    /* display: grid; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     background-color: rgba(96, 41, 41);
+    padding-top: 30px;
+    padding-left: 30px;
 }
 
 .menu-card {
-    width: 250px;
-    height: 150px;
+    width: 620px;
+    height: 280px;
     display:  grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
