@@ -1,5 +1,9 @@
 
 import cakes from './imgs/Cauldron-Cakes.jpg';
+import snake from './imgs/snake-filet.jpg';
+import beans from './imgs/beans.jpg';
+import pie from './imgs/shepherd.jpg';
+import beer from './imgs/Butter-beer.jpg';
 
 // plan isto create two main containers here. One will be much
 // bigger and contain the scrollable menu. The other will be
@@ -15,7 +19,7 @@ export const menuPage = function () {
     // const menuItems = ['Carl\'s Cauldron Cakes', 'Fenny Snake Filet', 
     // 'Bertie Bott\'s Every Flavour Beans', 'Shepard Pie', 'ButterBeer']
 
-    const menuImages = [cakes, 2, 3, 4, 5];
+    const menuImages = [cakes, snake, beans, pie, beer];
 
 
     //create 2main containers for the page

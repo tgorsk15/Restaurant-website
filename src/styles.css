@@ -262,6 +262,7 @@ html, body {
 .menu-image {
     /* grid-column: 1 / 2; */
     max-height: 215px;
+    max-width: 329px;
     align-self: center;
     border-radius: 25px;
     
