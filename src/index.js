@@ -77,8 +77,7 @@ const siteNavigator = (function () {
             homeContainer.style = 'display: grid'
             aboutContainer.style = 'display: none'
             menuContainer.style = 'display: none'
-            // pageHolder.removeChild(aboutContainer);
-            // pageHolder.appendChild(homeContainer);
+            
 
             // have to disable the Home Div click
             tabs[0].classList.add('disabled-tab');
@@ -90,9 +89,8 @@ const siteNavigator = (function () {
             homeContainer.style = 'display: none'
             aboutContainer.style = 'display: flex'
             menuContainer.style = 'display: none'
-            // pageHolder.removeChild(homeContainer);
-            // pageHolder.appendChild(aboutContainer);
-            
+
+
             tabs[1].classList.add('disabled-tab');
 
         }  else if (activeTab === tabs[2]) {
