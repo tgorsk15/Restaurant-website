@@ -22,13 +22,12 @@ const siteNavigator = (function () {
 
     // create the main website bar at the top
     const navigationBar = document.createElement('div');
-    // navigationBar.textContent = 'Bertie Bott\'s';
     navigationBar.classList.add('navigation-bar');
 
     // adds the navigation bar to the top
     pageHolder.appendChild(navigationBar);
 
-    // opens up tot he default home page
+
     homePage();
     pageHolder.appendChild(homeContainer);
 
@@ -114,11 +113,4 @@ const siteNavigator = (function () {
 })();
 
 
-
-
-// add addEventListeners to tab links at the top of page, so that when they
-//are clicked, the correct page is loaded in through the "content" div.
-
-// when one page is selected, the others should be set to
-// 'display: none'
 

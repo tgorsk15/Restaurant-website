@@ -36,7 +36,6 @@ export const homePage = function () {
 
 
     // style each homeDiv accordingly
-    // home1:
     styleHome1(home1);
     styleHome2(home2);
 
@@ -92,15 +91,10 @@ function styleHome2 (home2) {
 
     const frogTitle = document.createElement('h3');
     frogTitle.textContent = 'Live performances from Frog Choir every Friday at 7pm';
-    // frogTitle.classList.add('frog-title');
     home2.appendChild(frogTitle);
 }
 
-// export function clearHome (hasBeenRun) {
-//     console.log('cleared');
-//     hasBeenRun = true;
-//     console.log(hasBeenRun);
-// }
+
 
 export {homeContainer};
 

@@ -15,9 +15,7 @@ export const menuPage = function () {
     menuContainer.classList.add('menu-container');
     console.log('menu page linked');
 
-    // array for the menu items
-    // const menuItems = ['Carl\'s Cauldron Cakes', 'Fenny Snake Filet', 
-    // 'Bertie Bott\'s Every Flavour Beans', 'Shepard Pie', 'ButterBeer']
+   
 
     const menuImages = [cakes, snake, beans, pie, beer];
 
@@ -72,9 +70,6 @@ export const menuPage = function () {
     // menu items: will iterate through an array to create a 
     // number of menu Items ... images will be inserted based on what
     // the image array contains
-
-    // maybe give each div an ID based on the array item ... to be 
-    // able to insert custom menu item text later
     for (let i = 0; i < menuImages.length; i++) {
         const menuCard = document.createElement('div');
         menuFactory.addToMenu(menuCard, 'menu-card', menu1);
@@ -104,7 +99,6 @@ export const menuPage = function () {
             foodTitle: '',
             description: ''
         };
-        menuObjects.push(menuObject);
 
         if (i === 0) {
              // assign values to the titles and texts
@@ -140,17 +134,6 @@ export const menuPage = function () {
         menuItemWords.textContent = menuObject.description;
         console.log( menuItemTitle);
     }
-    
-    console.log(menuObjects);
-
-    // // assign values to the titles and texts
-    // menuObjects[0].foodTitle = 'Carl\'s Cauldron Cakes    $17.99';
-    // menuObjects[0].description = `These famous cakes will make your wand tingle
-    // with their swarmy and cream-of-toad filling surronded by a warm crust of 
-    // bread crumbs and figgleroot.`;
-
-    // // menuCardTexts[0].menuItemTitle.textContent = menuObjects[0].foodTitle;
-    // console.log( menuCardTexts[0].menuItemTitle);
 
 
 
