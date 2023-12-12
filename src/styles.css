@@ -235,7 +235,6 @@ html, body {
     /* display: grid; */
     position: relative;
     display: none;
-    /* background-color: lightsalmon; */
     min-height: 100vh;
     min-width: 100vh;
     grid-template-columns: 3fr 1fr;
@@ -254,6 +253,7 @@ html, body {
 }
 
 .menu1 {
+    width: 92vh;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -269,9 +269,7 @@ html, body {
 }
 
 .menu-card {
-    /* width: 620px;
-    height: 280px; */
-    width: 85vh;
+    width: 80vh;
     height: 230px;
     display:  grid;
     grid-template-columns: 1fr 1fr;
