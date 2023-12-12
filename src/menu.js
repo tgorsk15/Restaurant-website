@@ -34,12 +34,33 @@ export const menuPage = function () {
     const menu2 = document.createElement('div')
     menuFactory.addToMenu(menu2, 'menu2', menuContainer);
 
-    const menu2Title = document.createElement('h2');
+    const menu2Title = document.createElement('h1');
     menuFactory.addToMenu(menu2Title, 'menu2-title', menu2);
     menu2Title.textContent = 'Hours';
 
     const menu2Container = document.createElement('div');
     menuFactory.addToMenu(menu2Container, 'menu2-container', menu2);
+
+    for (let i = 0; i < 6; i++) {
+        const menu2Hour = document.createElement('div')
+        menuFactory.addToMenu(menu2Hour, 'menu2-hour', menu2Container);
+
+        if (i === 0) {
+            menu2Hour.textContent = 'Monday: 2:00 - 9:00pm'
+        } else if (i === 1) {
+            menu2Hour.textContent = 'Tuesday: 12:00 - 9:00pm'
+        } else if (i === 2) {
+            menu2Hour.textContent = 'Wednesday: 12:00 - 9:00pm'
+        } else if (i === 3) {
+            menu2Hour.textContent = 'Thursday: 12:00 - 9:00pm'
+        } else if (i === 4) {
+            menu2Hour.textContent = 'Friday: 12:00pm - 12:00am'
+        } else if (i === 5) {
+            menu2Hour.textContent = 'Saturday: 12:00pm - 12:00am'
+        } else if (i === 6) {
+            menu2Hour.textContent = 'Sunday: 12:00pm - 6:00pm'
+        }
+    };
 
 
     //title creation
