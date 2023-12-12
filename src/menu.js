@@ -21,6 +21,11 @@ export const menuPage = function () {
 
     const menuImages = [cakes, snake, beans, pie, beer];
 
+    // where card memory will be stored once the for loop is finished
+    const menuCardTexts = [];
+
+    const menuObjects = [];
+
 
     //create 2main containers for the page
     const menu1 = document.createElement('div')
@@ -51,9 +56,61 @@ export const menuPage = function () {
         menuFactory.addToMenu(menuImage, 'menu-image', menuCard);
 
         // create menuItemText div
-        const menuItemText = document.createElement('p')
+        const menuItemText = document.createElement('div')
         menuFactory.addToMenu(menuItemText, 'menu-item-txt', menuCard);
+
+        // push to array so it can individually style later
+        menuCardTexts.push(menuItemText);
+    };
+
+
+    for (let i = 0; i < menuCardTexts.length; i++) {
+        const menuItemTitle = document.createElement('h1');
+        menuFactory.addToMenu(menuItemTitle, 'menu-item-title', menuCardTexts[i]);
+
+        const menuItemWords = document.createElement('p');
+        menuFactory.addToMenu(menuItemWords, 'menu-item-words', menuCardTexts[i]);
+
+        const menuObject = {
+            foodTitle: '',
+            description: ''
+        };
+        menuObjects.push(menuObject);
+
+        if (i === 0) {
+             // assign values to the titles and texts
+            menuObject.foodTitle = `Carl's Cauldron Cakes` + `   ` + `$17.99`;
+            menuObject.description = `These famous cakes will make your wand tingle
+            with their swarmy and cream-of-toad filling surronded by a warm crust of 
+            bread crumbs and figgleroot.`;
+
+        } else if (i === 1) {
+            menuObject.foodTitle = `Fenny Snake Filet` + `   ` + `$39.00`;
+            menuObject.description = `We acquire our Fennies amongst the highest 
+            peaks of the Highlands near Hogwarts, making this steak absolutley top
+            of the line`;
+        } else if (i === 2) {
+            console.log('noth');
+        }
+
+        menuItemTitle.textContent = menuObject.foodTitle;
+        menuItemWords.textContent = menuObject.description;
+        console.log( menuItemTitle);
     }
+    
+    console.log(menuObjects);
+
+    // // assign values to the titles and texts
+    // menuObjects[0].foodTitle = 'Carl\'s Cauldron Cakes    $17.99';
+    // menuObjects[0].description = `These famous cakes will make your wand tingle
+    // with their swarmy and cream-of-toad filling surronded by a warm crust of 
+    // bread crumbs and figgleroot.`;
+
+    // // menuCardTexts[0].menuItemTitle.textContent = menuObjects[0].foodTitle;
+    // console.log( menuCardTexts[0].menuItemTitle);
+
+
+
 };
 
 

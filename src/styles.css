@@ -24,11 +24,13 @@ html, body {
 
 .navigation-tab {
     display: flex;
-    width: 80px;
+    justify-content: center;
+    width: 90px;
     height: 100%;
     background-color: rgb(96, 41, 41);
     padding: 0px 10px;
     text-align: center;
+    font-weight: bold;
     align-items: center;
     color: antiquewhite;
 }
@@ -265,7 +267,18 @@ html, body {
     max-width: 329px;
     align-self: center;
     border-radius: 25px;
+    box-shadow: -3px 10px 17px -1px black;
     
+}
+
+.menu-item-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.menu-item-title {
+    margin-bottom: 30px;
 }
 
 
