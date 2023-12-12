@@ -34,6 +34,14 @@ export const menuPage = function () {
     const menu2 = document.createElement('div')
     menuFactory.addToMenu(menu2, 'menu2', menuContainer);
 
+    const menu2Title = document.createElement('h2');
+    menuFactory.addToMenu(menu2Title, 'menu2-title', menu2);
+    menu2Title.textContent = 'Hours';
+
+    const menu2Container = document.createElement('div');
+    menuFactory.addToMenu(menu2Container, 'menu2-container', menu2);
+
+
     //title creation
     const menuTitle = document.createElement('h1');
     menuFactory.addToMenu(menuTitle, 'menu-title', menuContainer);
@@ -94,8 +102,18 @@ export const menuPage = function () {
             menuObject.foodTitle = `Bertie Bott's Every Flavor Beans` + `   ` + `$7.99`;
             menuObject.description = `A classic that Wizards and Witches have enjoyed all
             over the world for decades. Pick a bean at your own risk and hope you're not
-            confusing Black Licorice with Ash!!`
-        }
+            confusing Black Licorice with Ash!!`;
+        } else if (i === 3) {
+            menuObject.foodTitle = `Shepherd's Pie` + `   ` + `$15.99`;
+            menuObject.description = `Bertie's homemade Shepherd's Pie was selected in 2020
+            as one of the Wizarding World's most "hidden and underated pies" by the well known
+            critic Stanly Skimweed. Come and see for yourself!`;
+        } else if (i === 4) {
+            menuObject.foodTitle = `ButterBeer     $4.99`;
+            menuObject.description = `If you're feeling a little knackered from all that
+            spell casting and then some, an ice cold, gurgling, and creamy ButterBeer
+            is the way to go!`;
+        };
 
         menuItemTitle.textContent = menuObject.foodTitle;
         menuItemWords.textContent = menuObject.description;
