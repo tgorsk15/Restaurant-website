@@ -89,8 +89,12 @@ export const menuPage = function () {
             menuObject.description = `We acquire our Fennies amongst the highest 
             peaks of the Highlands near Hogwarts, making this steak absolutley top
             of the line`;
+
         } else if (i === 2) {
-            console.log('noth');
+            menuObject.foodTitle = `Bertie Bott's Every Flavor Beans` + `   ` + `$7.99`;
+            menuObject.description = `A classic that Wizards and Witches have enjoyed all
+            over the world for decades. Pick a bean at your own risk and hope you're not
+            confusing Black Licorice with Ash!!`
         }
 
         menuItemTitle.textContent = menuObject.foodTitle;
