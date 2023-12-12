@@ -22,7 +22,7 @@ const siteNavigator = (function () {
 
     // create the main website bar at the top
     const navigationBar = document.createElement('div');
-    navigationBar.textContent = 'Bertie Bott\'s';
+    // navigationBar.textContent = 'Bertie Bott\'s';
     navigationBar.classList.add('navigation-bar');
 
     // adds the navigation bar to the top

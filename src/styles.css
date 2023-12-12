@@ -16,10 +16,18 @@ html, body {
 
 .navigation-bar {
     height: 55px;
-    /* background-color: rgb(73, 72, 72); */
+    /* background-color: rgb(111, 111, 111, 0.7); */
+    padding-left: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(96, 41, 41, 0);
     display: flex;
     justify-content: start;
     gap: 30px;
+}
+
+.navigation-bar:hover {
+    background-color: rgb(111, 111, 111, 0.7);
+    border-bottom: 3px solid rgb(96, 41, 41);
 }
 
 .navigation-tab {
@@ -64,6 +72,7 @@ html, body {
 
 .home1 * {
     color: rgb(224, 223, 223);
+    text-shadow: 2px 2px 30px rgb(119, 118, 118);
 }
 
 .home-title-container {
@@ -72,19 +81,21 @@ html, body {
     min-width: 485px;
     justify-content: center;
     align-items: center;
-    /* gap: 20px; */
+    
 }
 
 .home1 h1 {
     display: flex;
     justify-content: center;
     font-size: 62px;
+    text-shadow: 0px 3px 50px rgb(24, 23, 23);
 }
 
 .home-box {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     height: 150px;
+    text-shadow: 0px 3px 50px rgb(24, 23, 23);
 }
 
 .hat-icon {
@@ -97,10 +108,12 @@ html, body {
 
 .home-hook {
     font-size: 35px;
+    text-shadow: 0px 3px 50px rgb(11, 11, 11);
 }
 
 .home-descript {
     font-size: 20px;
+    text-shadow: 2px 3px 50px rgb(24, 23, 23);
 }
 
 .order-button {
@@ -114,6 +127,7 @@ html, body {
     color: antiquewhite;
     background-color: rgb(96, 41, 41);
     border-radius: 25px;
+    box-shadow: -3px 3px 17px 0px black;
 }
 
 .home2 {
@@ -137,14 +151,15 @@ html, body {
 
 .home2 h3 {
     text-align: center;
-    font-size: 22px;
+    font-size: 28px;
+    text-shadow: 2px 3px 50px rgb(24, 23, 23);
 }
 
 
 
 .frog-icon {
     display: inline-block;
-    height: 100px;
+    height: 200px;
     width: max-content;
 }
 
@@ -266,15 +281,14 @@ html, body {
     max-width: 329px;
     align-self: center;
     border-radius: 25px;
-    box-shadow: -3px 10px 17px -1px black;
+    box-shadow: -3px 5px 17px -1px black;
     
 }
 
 .menu-item-txt {
-    /* display: flex; */
     flex-direction: column;
     justify-content: start;
-    color: rgb(184, 154, 102);
+    /* color: rgb(184, 154, 102); */
     font-size: 18px;
 }
 
